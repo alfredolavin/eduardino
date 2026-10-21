@@ -400,9 +400,6 @@ struct bitFlag_t {
   constexpr bitFlag_t(u8 _mask)
     : mask(_mask) {}
 
-  constexpr bitFlag_t operator+(const bitFlag_t other) const {
-    return bitFlag_t(other.mask | mask); }
-
   constexpr bitFlag_t operator-(const bitFlag_t other) const {
     return bitFlag_t(other.mask & ~mask); }
 

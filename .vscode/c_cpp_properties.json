@@ -3,8 +3,8 @@
         {
             "name": "AVR",
             "intelliSenseMode": "linux-gcc-arm",
-            "cStandard": "gnu23",
-            "cppStandard": "gnu++23",
+            "cStandard": "${default}",
+            "cppStandard": "${default}",
             "includePath": [],
             "compilerArgs": [
                 "-g",

@@ -44,11 +44,12 @@ inline constexpr auto pyRange(cu16 & _to) {
   return pyRange((cu16)0, _to, (cu16)1); }
 
 
-#define define_range(x, letter, int_type) int_type letter = 0; letter < (x); letter++
+//#define define_range(x, letter, int_type) int_type letter = 0; letter < (x); letter++
+#define define_range(to, letter, int_type) int_type letter : pyRange(to)
 
 #define iRange16(x) define_range(x, i, u16)
 #define iRange32(x) define_range(x, i, u32)
-#define iRange(x) auto i : pyRange(x) //define_range(x, i, u8)//auto i : pyRange(x)
+#define iRange(x) define_range(x, i, u8)//auto i : pyRange(x)
 #define jRange(x) define_range(x, j, u8)
 #define kRange(x) define_range(x, k, u8)
 #define xRange(_x) define_range(_x, x, u8)

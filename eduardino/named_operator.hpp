@@ -88,7 +88,7 @@ public:
 private:
   const T start_;
   const T stop_;
-  const T step_; }; } // namespace detail
+  const T step_; }; }
 
 template <typename T>
 detail::Range<T> range(const T &stop) {
